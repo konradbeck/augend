@@ -8,12 +8,15 @@ import java.math.BigDecimal;
 @Entity
 public class RevenueStream extends AbstractAuditable<User, Long> {
 
-    @Column
     private BigDecimal amount;
 
     @ManyToOne
     @JoinColumn
     private Offer offer;
+
+    @ManyToOne
+    @JoinColumn
+    private PaymentPlan paymentPlan;
 
     @ManyToOne
     @JoinColumn

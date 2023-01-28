@@ -6,4 +6,15 @@ import org.springframework.data.jpa.domain.AbstractAuditable;
 @Entity
 public class PaymentPlan extends AbstractAuditable<User, Long> {
 
+    @ManyToOne
+    @JoinColumn
+    private PaymentAccount paymentAccount;
+
+    @ManyToOne
+    @JoinColumn
+    private PaymentCycle paymentCycle;
+
+    @ManyToOne
+    @JoinColumn
+    private Quote quote;
 }

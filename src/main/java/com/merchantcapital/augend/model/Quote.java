@@ -8,17 +8,19 @@ import java.math.BigDecimal;
 @Entity
 public class Quote extends AbstractAuditable<User, Long> {
 
-    @Column
     private BigDecimal amount;
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    private BigDecimal factorPerMonth;
 
-    @Column
+    @ManyToOne
+    @JoinColumn
+    private LoanAccount loanAccount;
+
     private BigDecimal term;
 
     @ManyToOne
     @JoinColumn
     private Offer offer;
+
+    private BigDecimal total;
 }

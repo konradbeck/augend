@@ -1,7 +1,6 @@
 package com.merchantcapital.augend.controller;
 
 import com.merchantcapital.augend.dto.OfferDto;
-import com.merchantcapital.augend.model.Offer;
 import com.merchantcapital.augend.service.OfferService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

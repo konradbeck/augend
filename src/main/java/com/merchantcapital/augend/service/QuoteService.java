@@ -1,10 +1,7 @@
 package com.merchantcapital.augend.service;
 
-import com.merchantcapital.augend.dto.OfferDto;
 import com.merchantcapital.augend.dto.QuoteDto;
-import com.merchantcapital.augend.mapper.OfferMapper;
 import com.merchantcapital.augend.mapper.QuoteMapper;
-import com.merchantcapital.augend.repository.OfferRepository;
 import com.merchantcapital.augend.repository.QuoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.mapstruct.factory.Mappers;

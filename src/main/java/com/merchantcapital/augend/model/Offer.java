@@ -10,31 +10,24 @@ import java.util.Set;
 @Entity
 public class Offer extends AbstractAuditable<User, Long> {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    @ManyToOne
+    @JoinColumn
+    private Account account;
 
-    @Column
     private BigDecimal maximumAmount;
 
-    @Column
     private BigDecimal maximumHoldback;
 
-    @Column
     private BigDecimal maximumTerm;
 
-    @Column
     private BigDecimal minimumAmount;
 
-    @Column
     private BigDecimal minimumHoldback;
 
-    @Column
     private BigDecimal minimumTerm;
 
-    @Column
     private BigDecimal monthlyAverageRevenue;
 
     @OneToMany(mappedBy = "offer", orphanRemoval = true)
-    private Set<Quote> quotes = new LinkedHashSet<>();
+    private Set<Quote> quotes;
 }
