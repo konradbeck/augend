@@ -14,5 +14,15 @@ public class TransactionAccount extends AbstractAuditable<User, Long> {
     private Account account;
 
     @OneToMany(mappedBy = "transactionAccount", orphanRemoval = true)
+    private Set<DailyTransaction> dailyTransactions;
+
+    @OneToMany(mappedBy = "transactionAccount", orphanRemoval = true)
+    private Set<MonthlyTransaction> monthlyTransactions;
+
+    @OneToMany(mappedBy = "transactionAccount", orphanRemoval = true)
     private Set<Transaction> transactions;
+
+    @ManyToOne
+    @JoinColumn
+    private Account provider;
 }

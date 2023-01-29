@@ -10,6 +10,8 @@ public class Quote extends AbstractAuditable<User, Long> {
 
     private BigDecimal amount;
 
+    private BigDecimal averageMonthlyRevenue;
+
     private BigDecimal factorPerMonth;
 
     @ManyToOne

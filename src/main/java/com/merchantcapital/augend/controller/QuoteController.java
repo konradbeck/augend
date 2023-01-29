@@ -17,7 +17,7 @@ public class QuoteController {
 
     private final QuoteService quoteService;
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     Optional<QuoteDto> findById(@PathVariable Long id) {
         return quoteService.findById(id);
     }

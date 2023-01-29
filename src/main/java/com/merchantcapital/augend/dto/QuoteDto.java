@@ -1,15 +1,15 @@
 package com.merchantcapital.augend.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Getter
-@Builder
+import java.math.BigDecimal;
+
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class QuoteDto {
+
+    BigDecimal averageMonthlyRevenue;
 
     Long id;
 }

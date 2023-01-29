@@ -8,5 +8,9 @@ import java.util.Set;
 @Entity
 public class Account extends AbstractAuditable<User, Long> {
 
+    @OneToMany(mappedBy = "account", orphanRemoval = true)
+    private Set<TransactionAccount> accountTransactionAccounts;
 
+    @OneToMany(mappedBy = "provider", orphanRemoval = true)
+    private Set<TransactionAccount> providerTransactionAccounts;
 }

@@ -19,5 +19,9 @@ public class Transaction extends AbstractAuditable<User, Long> {
 
     @ManyToOne
     @JoinColumn
+    private TransactionRule transactionRule;
+
+    @ManyToOne
+    @JoinColumn
     private TransactionAccount transactionAccount;
 }

@@ -15,7 +15,7 @@ public class OfferController {
 
     private final OfferService offerService;
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     Optional<OfferDto> findById(@PathVariable Long id) {
         return offerService.findById(id);
     }
