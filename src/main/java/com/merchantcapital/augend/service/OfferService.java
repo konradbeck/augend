@@ -23,15 +23,15 @@ public class OfferService {
     public List<OfferDto> findAll() {
         return offerRepository.findAll()
                 .stream()
-                .map(offerMapper::offerToOfferDto)
+                .map(offerMapper::fromOffer)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
     public Optional<OfferDto> findById(Long id) {
-        return offerRepository.findById(id).map(offerMapper::offerToOfferDto);
+        return offerRepository.findById(id).map(offerMapper::fromOffer);
     }
 
     public OfferDto save(OfferDto offerDto) {
-        return offerMapper.offerToOfferDto(offerRepository.save(offerMapper.offerDtoToOffer(offerDto)));
+        return offerMapper.fromOffer(offerRepository.save(offerMapper.toOffer(offerDto)));
     }
 }

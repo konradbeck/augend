@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 @Mapper
 public interface OfferMapper {
 
-    Offer offerDtoToOffer(OfferDto offerDto);
+    Offer toOffer(OfferDto offerDto);
 
-    OfferDto offerToOfferDto(Offer offer);
+    OfferDto fromOffer(Offer offer);
 }
