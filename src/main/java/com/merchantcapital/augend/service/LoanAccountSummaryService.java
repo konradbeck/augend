@@ -18,7 +18,7 @@ public class LoanAccountSummaryService {
 
     private final LoanAccountSummaryRepository loanAccountSummaryRepository;
 
-    public List<LoanAccountSummaryDto> saveLoanAccountSummaries(List<LoanAccountSummaryDto> loanAccountSummaryDtos)
+    public List<LoanAccountSummaryDto> save(List<LoanAccountSummaryDto> loanAccountSummaryDtos)
     {
         return loanAccountSummaryRepository.saveAll(loanAccountSummaryDtos.stream()
                         .map(loanAccountSummaryMapper::toLoanAccountSummary)
