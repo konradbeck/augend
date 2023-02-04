@@ -12,7 +12,18 @@ import java.util.Set;
 @Table(name = "payment")
 public class Payment extends AbstractAuditable<User, Long> {
 
+    @Column(name = "amount")
     private BigDecimal amount;
+
+    @Column(name = "balance")
+    private BigDecimal balance;
+
+    @Column(name = "number")
+    private int number;
+
+    @ManyToOne
+    @JoinColumn
+    private PaymentSchedule paymentSchedule;
 
     @ElementCollection(targetClass = PaymentStatusDto.class, fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)

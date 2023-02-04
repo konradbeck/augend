@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AccountContactRelationRepository extends JpaRepository<AccountContactRelation, Long>, JpaSpecificationExecutor<AccountContactRelation> {
-
 }

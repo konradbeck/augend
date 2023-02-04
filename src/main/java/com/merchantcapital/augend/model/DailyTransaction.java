@@ -1,19 +1,20 @@
 package com.merchantcapital.augend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.springframework.data.jpa.domain.AbstractAuditable;
 
+import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.Date;
 
 @Entity
-@Table(name = "daily_transaction")
+@Table(name = "daily_transaction", uniqueConstraints = @UniqueConstraint(columnNames = {"transaction_account_id", "date"}))
 public class DailyTransaction extends AbstractAuditable<User, Long> {
 
-    private ZonedDateTime date;
-
+    @Column(name = "amount")
+    private BigDecimal amount;
+    @Column(name = "date")
+    private Date date;
     @ManyToOne
     @JoinColumn
     private TransactionAccount transactionAccount;
