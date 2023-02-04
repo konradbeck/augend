@@ -1,4 +1,6 @@
 package com.merchantcapital.augend.dto;
 
-public class PaymentCycleDto {
+import java.io.Serializable;
+
+public record PaymentCycleDto() implements Serializable {
 }

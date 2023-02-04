@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
+@Table(name = "payment")
 public class Payment extends AbstractAuditable<User, Long> {
 
     private BigDecimal amount;

@@ -5,7 +5,7 @@ import jakarta.persistence.Table;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User extends AbstractPersistable<Long> {
 
     private String firstName;

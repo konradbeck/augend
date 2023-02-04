@@ -54,7 +54,7 @@ public class QuoteService {
     }
 
     private void setAverageMonthlyRevenue(List<QuoteDto> quoteDtos) {
-        quoteDtos.stream()
-                .forEach(quoteDto -> quoteDto.setAverageMonthlyRevenue(BigDecimal.valueOf(100)));
+        //quoteDtos.stream()
+                //.forEach(quoteDto -> quoteDto.setAverageMonthlyRevenue(BigDecimal.valueOf(100)));
     }
 }

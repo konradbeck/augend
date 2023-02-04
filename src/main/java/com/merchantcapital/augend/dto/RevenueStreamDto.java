@@ -1,4 +1,6 @@
 package com.merchantcapital.augend.dto;
 
-public class RevenueStreamDto {
+import java.io.Serializable;
+
+public record RevenueStreamDto() implements Serializable {
 }

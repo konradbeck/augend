@@ -1,4 +1,6 @@
 package com.merchantcapital.augend.dto;
 
-public class AccountContactRelationDto {
+import java.io.Serializable;
+
+public record AccountContactRelationDto() implements Serializable {
 }

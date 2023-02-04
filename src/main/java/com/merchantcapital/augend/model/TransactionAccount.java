@@ -6,6 +6,7 @@ import org.springframework.data.jpa.domain.AbstractAuditable;
 import java.util.Set;
 
 @Entity
+@Table(name = "transaction_account")
 public class TransactionAccount extends AbstractAuditable<User, Long> {
 
 

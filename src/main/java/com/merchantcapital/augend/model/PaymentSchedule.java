@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.springframework.data.jpa.domain.AbstractAuditable;
 
 @Entity
+@Table(name = "payment_schedule")
 public class PaymentSchedule extends AbstractAuditable<User, Long> {
 
     @ManyToOne

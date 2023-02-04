@@ -8,6 +8,7 @@ import java.time.ZonedDateTime;
 import java.util.Set;
 
 @Entity
+@Table(name = "loan_account")
 public class LoanAccount extends AbstractAuditable<User, Long> {
 
     @ManyToOne

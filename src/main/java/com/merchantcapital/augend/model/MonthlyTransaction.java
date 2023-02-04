@@ -1,14 +1,12 @@
 package com.merchantcapital.augend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import org.springframework.data.jpa.domain.AbstractAuditable;
 
 import java.math.BigDecimal;
 
 @Entity
+@Table(name = "monthly_transaction")
 public class MonthlyTransaction extends AbstractAuditable<User, Long> {
 
     private BigDecimal amount;

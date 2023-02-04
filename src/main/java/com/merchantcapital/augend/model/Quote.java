@@ -6,6 +6,7 @@ import org.springframework.data.jpa.domain.AbstractAuditable;
 import java.math.BigDecimal;
 
 @Entity
+@Table(name = "quote")
 public class Quote extends AbstractAuditable<User, Long> {
 
     private BigDecimal amount;

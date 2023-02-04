@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Entity
+@Table(name = "transaction")
 public class Transaction extends AbstractAuditable<User, Long> {
 
     private BigDecimal amount;

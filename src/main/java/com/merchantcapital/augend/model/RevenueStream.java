@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
+@Table(name = "revenue_stream")
 public class RevenueStream extends AbstractAuditable<User, Long> {
 
     private BigDecimal amount;

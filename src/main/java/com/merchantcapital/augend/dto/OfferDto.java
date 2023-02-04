@@ -2,11 +2,7 @@ package com.merchantcapital.augend.dto;
 
 import lombok.*;
 
-@Getter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class OfferDto {
+import java.io.Serializable;
 
-    Long id;
+public record OfferDto(Long id) implements Serializable {
 }
